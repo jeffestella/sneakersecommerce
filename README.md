@@ -34,4 +34,45 @@ The designs were created to the following widths:
 - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700
 
->Note: Project screenshots in /screenshots directory
+>Note: Project screenshots in /design directory
+
+
+# Jeff's Notes
+## Components and Architecture
+- \<Navbar /\>
+    - Company logo (Home btn)
+    - Nav links
+    - \<Cart /\>
+        - \<CartCount /\> badge
+        - Dropdown
+            - "Cart" header
+            - \<CartItem /\> list
+                - product photo
+                - product name
+                - product price x qty
+                - total
+                - garbage icon
+                - \<CTABtn /\>
+                    - "Checkout"
+- \<ProductInfo /\>
+    - Props:
+        - manufacturer
+        - name
+        - blurb
+        - priceCurrent
+        - discount
+        - priceOriginal
+    - Manufacturer
+    - Product Name
+    - Product Description
+    - Price: Current
+        - Discount %
+    - Price: Previous w/ strikethrough
+    - \<QtyCounter /\>
+        - Subtract icon
+        - Counter
+        - Add icon
+    - \<CTABtn /\>
+        - Cart Icon
+        - "Add to cart"
+        - Function
