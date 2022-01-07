@@ -16,7 +16,8 @@ const Navbar = () => {
             </ul>
             <Cart />
             <UserIcon 
-                photo={avatar}
+                photo={avatar} 
+                alt="man with long hair and sunglasses"
             />
         </div>
     );
