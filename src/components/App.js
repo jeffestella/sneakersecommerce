@@ -1,12 +1,13 @@
 import './App.css';
 import Navbar from './Navbar';
+import PhotoBox from './PhotoBox';
 import ProductInfo from './ProductInfo';
 
 const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <h1>Hello World</h1>
+      <PhotoBox />
       <ProductInfo 
         manufacturer="Sneaker Company" 
         name="Fall Limited Edition Sneakers" 

@@ -39,22 +39,23 @@ The designs were created to the following widths:
 
 # Jeff's Notes
 ## Components and Architecture
-- \<Navbar /\>
+- \<Navbar />
     - Company logo (Home btn)
     - Nav links
-    - \<Cart /\>
-        - \<CartCount /\> badge
+    - \<Cart />
+        - \<CartCount /> badge
         - Dropdown
             - "Cart" header
-            - \<CartItem /\> list
+            - \<CartItem /> list
                 - product photo
                 - product name
                 - product price x qty
                 - total
                 - garbage icon
-                - \<CTABtn /\>
+                - \<CTABtn />
                     - "Checkout"
-- \<ProductInfo /\>
+    - \<UserIcon />
+- \<ProductInfo />
     - Props:
         - manufacturer
         - name
@@ -68,11 +69,27 @@ The designs were created to the following widths:
     - Price: Current
         - Discount %
     - Price: Previous w/ strikethrough
-    - \<QtyCounter /\>
+    - \<QtyCounter />
         - Subtract icon
         - Counter
         - Add icon
-    - \<CTABtn /\>
+    - \<CTABtn />
         - Cart Icon
         - "Add to cart"
         - Function
+- \<PhotoBox />
+    - Current Photo
+    - \<Carousel />
+        - Photo 1
+        - Photo 2
+        - Photo 3
+        - Photo 4
+## To-Do
+- Make page template with \<Content /> component
+    - State for \<Content /> will have photos, and all props from \<ProductInfo />
+    - store props in Content and pass down to ProductInfo and PhotoBox)
+
+## To Learn
+- CSS: backdrop shadow
+- How to make a carousel
+- Review how to make a modal
