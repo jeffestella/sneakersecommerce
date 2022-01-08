@@ -88,7 +88,7 @@ The designs were created to the following widths:
 - Make page template with \<Content /> component
     - State for \<Content /> will have photos, and all props from \<ProductInfo />
     - store props in Content and pass down to ProductInfo and PhotoBox)
-
+    - \<App /> will store cart state
 ## To Learn
 - CSS: backdrop shadow
 - How to make a carousel
