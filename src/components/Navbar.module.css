@@ -53,7 +53,7 @@
 }
 
 .left a {
-    /* border: 1px solid red; */
+    border-bottom: 5px solid rgba(0,0,0,0);
 
     color: var(--grayish-blue);
     text-decoration: none;
@@ -64,7 +64,7 @@
 
 .left a:hover {
     color: var(--black);
-    border-bottom: 5px solid var(--orange);
+    border-bottom: 5px solid var(--orange)
 }
 
 .right {
