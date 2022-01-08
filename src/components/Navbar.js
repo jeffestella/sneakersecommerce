@@ -19,8 +19,12 @@ const Navbar = () => {
                 </div>
             </div>
             <div className={navbarStyles.right}>
-                <Cart />
+                <Cart 
+                    className={navbarStyles.cart} 
+                    badge={0}
+                />
                 <UserIcon 
+                    className={navbarStyles.avatar}
                     photo={avatar} 
                     alt="man with long hair and sunglasses"
                 />

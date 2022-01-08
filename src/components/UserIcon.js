@@ -1,10 +1,14 @@
 import React from 'react';
 
 
-const UserIcon = ({ photo, alt }) => {
+const UserIcon = ({ className, photo, alt }) => {
     return(
         <div>
-            <img src={photo} alt={alt} />
+            <img 
+                className={className} 
+                src={photo} 
+                alt={alt} 
+            />
         </div>
     );
 }
