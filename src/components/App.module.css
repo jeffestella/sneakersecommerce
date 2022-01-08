@@ -8,6 +8,7 @@
     font-size: 16px;
 
     --orange: hsl(26, 100%, 55%);
+    --medium-orange: hsl(26, 100%, 60%);
     --pale-orange: hsl(25, 100%, 94%);
     
     --very-dark-blue: hsl(220, 13%, 13%);
@@ -16,4 +17,20 @@
     --light-grayish-blue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+}
+
+.container {
+    /* border: 1px solid blue; */
+    width: 90vw;
+    margin: 0 9%;
+}
+
+.content {
+    /* border: 1px solid green; */
+    width: 100%;
+    padding: 5% 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }

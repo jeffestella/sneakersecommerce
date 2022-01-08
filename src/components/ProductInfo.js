@@ -1,25 +1,28 @@
 import React from 'react';
 import QtyCounter from './QtyCounter';
 import CTABtn from './CTABtn'
+import productInfoStyes from './ProductInfo.module.css';
 
 const ProductInfo = (props) => {
     return(
-        <div>
-            <h3>{props.manufacturer}</h3>
-            <h1>{props.name}</h1>
-            <p>{props.blurb}</p>
+        <div className={productInfoStyes.container}>
+            <h3 className={productInfoStyes.company}>{props.manufacturer}</h3>
+            <h1 className={productInfoStyes.name}>{props.name}</h1>
+            <p className={productInfoStyes.blurb}>{props.blurb}</p>
             <div> 
-                <div> 
-                    <h2>{props.priceCurrent}</h2>
-                    <span>{props.discount}</span>
+                <div className={productInfoStyes.current}> 
+                    <span className={productInfoStyes.price}>{props.priceCurrent}</span>
+                    <span className={productInfoStyes.discount}>{props.discount}</span>
                 </div>
-                <h3>{props.priceOriginal}</h3>
+                <h3 className={productInfoStyes.original}>{props.priceOriginal}</h3>
             </div>
-            <QtyCounter />
-            <CTABtn 
-                icon="cart"
-                text="Add to cart"
-            />
+            <div>
+                <QtyCounter />
+                <CTABtn 
+                    icon="cart"
+                    text="Add to cart"
+                />
+            </div>
         </div>
     );
 }

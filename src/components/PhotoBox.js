@@ -1,8 +1,9 @@
 import React from 'react';
+import photoBoxStyles from './PhotoBox.module.css';
 
 const PhotoBox = () => {
     return(
-        <div>
+        <div className={photoBoxStyles.container}>
             <div>
                 Main Photo
             </div>

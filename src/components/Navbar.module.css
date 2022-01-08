@@ -24,7 +24,6 @@
 
 .left {
     /* border: 1px solid red; */
-
     width: 60%;
 
     display: flex;
@@ -45,7 +44,6 @@
 
 .left .links {
     /* border: 1px solid red; */
-
     width: 65%;
     display: flex;
     justify-content: space-evenly;
@@ -55,21 +53,20 @@
 .left a {
     border-bottom: 5px solid rgba(0,0,0,0);
 
-    color: var(--grayish-blue);
-    text-decoration: none;
-
     display: flex;
     align-items: center;
+
+    color: var(--grayish-blue);
+    text-decoration: none;
 }
 
 .left a:hover {
+    border-bottom: 5px solid var(--orange);
     color: var(--black);
-    border-bottom: 5px solid var(--orange)
 }
 
 .right {
     /* border: 1px solid red; */
-    
     padding: 0;
     margin: 0;
     width: 15%;

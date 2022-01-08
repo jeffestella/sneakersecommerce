@@ -1,0 +1,72 @@
+.container {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    --orange: hsl(26, 100%, 55%);
+    --medium-orange: hsl(26, 100%, 60%);
+    --pale-orange: hsl(25, 100%, 94%);
+    
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue : hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%); /*(with 75% opacity for lightbox background)*/
+
+}
+
+.company {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--medium-orange);
+    /* color: var(--pale-orange); */
+}
+
+.name {
+    margin: 0 0 8%;
+    font-size: 2.35rem;
+}
+
+.blurb {
+    margin: 0 0 5.5%;
+    color: var(--dark-grayish-blue);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+.current {
+    /* border: 1px solid red; */
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.discount {
+    padding: 0.5% 2%;
+    margin-left: 3.5%;
+    border-radius: 6px;
+
+    color: var(--medium-orange);
+    font-weight: 700;
+    background-color: var(--pale-orange);
+    
+}
+
+.original {
+    font-size: 0.85rem;
+    color: var(--grayish-blue);
+    text-decoration: line-through;
+}
