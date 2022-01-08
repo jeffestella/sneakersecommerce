@@ -3,7 +3,12 @@ import React from 'react';
 const CTABtn = ({ icon, text }) => {
     return(
         <button>
-            {icon} {text}
+            <span>
+                
+                icon ?
+                {icon} 
+            </span>
+            {text}
         </button>
     );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import QtyCounter from './QtyCounter';
 import CTABtn from './CTABtn'
 import productInfoStyes from './ProductInfo.module.css';
+import iconCart from '../assets/icon-cart.svg';
 
 const ProductInfo = (props) => {
     return(
@@ -19,7 +20,7 @@ const ProductInfo = (props) => {
             <div>
                 <QtyCounter />
                 <CTABtn 
-                    icon="cart"
+                    icon={iconCart}
                     text="Add to cart"
                 />
             </div>

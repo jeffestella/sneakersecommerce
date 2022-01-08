@@ -1,31 +1,49 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
+import iconMinus from '../assets/icon-minus.svg';
+import iconPlus from '../assets/icon-plus.svg';
 
-const QtyBtn = ({ symbol }) => {
+const QtyBtn = ({ symbol, quantity, setQuantity, alt }) => {
     return(
-        <button>
-            {symbol}
+        <button
+            onClick={() => {
+                // Alter function of button depending on "plus" or "minus" alt text
+                //If "minus", don't allow quantity to go below 1
+                alt === "minus" ?
+                    quantity-1 < 1 ?
+                    setQuantity(1) :
+                    setQuantity(quantity-1) 
+                : setQuantity(quantity+1)
+            }}
+        >
+            <img src={symbol} alt={`${alt} button`}></img>
         </button>
     );
 }
 
 const QtyCounter = () => {
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+
+    // useEffect( ()=> {
+    //     if(quantity < 1) {
+    //         setQuantity(1);
+    //     }
+    // })
 
     return (
         <span>
             <QtyBtn 
-                symbol={"-"}
-                onClick={() => {
-                    setQuantity(quantity - 1)
-                }}
+                symbol={iconMinus}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                alt="minus"
             />
             <span>{quantity}</span>
             <QtyBtn 
-                symbol={"+"} 
-                onClick={() => {
-                    setQuantity(quantity + 1)
-                }}
+                symbol={iconPlus}
+                quantity={quantity}
+                setQuantity={setQuantity}
+                alt="plus"
             />
         </span>
     );
