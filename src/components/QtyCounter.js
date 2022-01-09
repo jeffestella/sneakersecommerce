@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import iconMinus from '../assets/icon-minus.svg';
 import iconPlus from '../assets/icon-plus.svg';
+import qtyCounterStyles from './QtyCounter.module.css';
 
 const QtyBtn = ({ symbol, quantity, setQuantity, alt }) => {
     return(
@@ -25,14 +26,14 @@ const QtyCounter = () => {
     const [quantity, setQuantity] = useState(1);
 
     return (
-        <span>
+        <span className={qtyCounterStyles.container}>
             <QtyBtn 
                 symbol={iconMinus}
                 quantity={quantity}
                 setQuantity={setQuantity}
                 alt="minus"
             />
-            <span>{quantity}</span>
+            <span className={qtyCounterStyles.quant}>{quantity}</span>
             <QtyBtn 
                 symbol={iconPlus}
                 quantity={quantity}

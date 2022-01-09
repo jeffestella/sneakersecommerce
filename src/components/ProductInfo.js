@@ -17,7 +17,7 @@ const ProductInfo = (props) => {
                 </div>
                 <h3 className={productInfoStyes.original}>{props.priceOriginal}</h3>
             </div>
-            <div>
+            <div className={productInfoStyes.clickables}>
                 <QtyCounter />
                 <CTABtn 
                     icon={iconCart}

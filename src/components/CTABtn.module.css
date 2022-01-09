@@ -1,11 +1,12 @@
 button.container {
-    height: 50px;
-    width: 200px;
+    /* width and height specified by CSS of its parent component */
+    width: 60%;
     border: none;
     border-radius: 10px;
 
     background-color: var(--orange);
     color: var(--white);
+    box-shadow: 2px 13px 12px var(--pale-orange);
     font-weight: bold;
     letter-spacing: 0.5px;
     

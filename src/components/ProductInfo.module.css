@@ -55,7 +55,19 @@
 }
 
 .original {
+    margin-bottom: 7%;
     font-size: 0.85rem;
     color: var(--grayish-blue);
     text-decoration: line-through;
+}
+
+.clickables {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:  space-between;
 }
