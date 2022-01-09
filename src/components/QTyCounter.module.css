@@ -24,6 +24,10 @@
     cursor: pointer;
 }
 
+.container button:hover {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(10%) saturate(1184%) hue-rotate(306deg) brightness(106%) contrast(101%);
+}
+
 .quant {
     /* border: 1px solid red; */
     width: 40%;
