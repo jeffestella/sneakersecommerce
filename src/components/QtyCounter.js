@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import iconMinus from '../assets/icon-minus.svg';
 import iconPlus from '../assets/icon-plus.svg';
@@ -23,12 +23,6 @@ const QtyBtn = ({ symbol, quantity, setQuantity, alt }) => {
 
 const QtyCounter = () => {
     const [quantity, setQuantity] = useState(1);
-
-    // useEffect( ()=> {
-    //     if(quantity < 1) {
-    //         setQuantity(1);
-    //     }
-    // })
 
     return (
         <span>
