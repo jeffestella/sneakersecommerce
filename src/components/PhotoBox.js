@@ -8,6 +8,7 @@ import productThumb1 from '../assets/image-product-1-thumbnail.jpg';
 import productThumb2 from '../assets/image-product-2-thumbnail.jpg';
 import productThumb3 from '../assets/image-product-3-thumbnail.jpg';
 import productThumb4 from '../assets/image-product-4-thumbnail.jpg';
+import Modal from './Modal';
 
 const PhotoBox = () => {
     const photos = [
@@ -34,12 +35,13 @@ const PhotoBox = () => {
     ]
 
     const [currentPhoto, setCurrentPhoto] = useState(productPhoto1);
+    const [modalActive, setModalActive] = useState(true);
 
     const thumbs = photos.map((photo) => {
         return (
             <img 
                 className={`
-                    ${currentPhoto===photo.photo?
+                    ${currentPhoto===photo.photo ?
                         photoBoxStyles.selected :
                         ''
                     } ${photoBoxStyles.thumbnail}`}
@@ -52,11 +54,19 @@ const PhotoBox = () => {
 
     return(
         <div className={photoBoxStyles.container}>
+            <Modal 
+                modalActive={modalActive}
+                setModalActive={setModalActive}
+                photos={photos} 
+                firstPhoto={currentPhoto}
+                thumbs={thumbs}
+            />
             <div>
                 <img 
                     className={photoBoxStyles.current}
                     src={currentPhoto} 
                     alt="pair of white sneakers and brown sneakers with orange accents"
+                    onClick={()=>{setModalActive(true)}}
                 />
             </div>
             <div className={photoBoxStyles.thumbnails}>

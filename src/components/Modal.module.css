@@ -1,0 +1,36 @@
+.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: hsl(0, 0%, 0%, 0.5)
+}
+
+.inactive {
+    visibility: hidden;
+}
+
+.content {
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.content img {
+    width: 100px;
+}
+
+.thumbnails {
+
+}
+
+.thumbnail {
+
+}
