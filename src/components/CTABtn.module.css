@@ -6,7 +6,7 @@ button.container {
 
     background-color: var(--orange);
     color: var(--white);
-    box-shadow: 2px 13px 12px var(--pale-orange);
+    box-shadow: 1px 17px 15px 5px var(--pale-orange);
     font-weight: bold;
     letter-spacing: 0.5px;
     
