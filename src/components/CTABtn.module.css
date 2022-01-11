@@ -14,7 +14,7 @@ button.container {
 }
 
 button.container:hover {
-    background-color: var(--pale-orange);
+    background-color: var(--faded-orange);
 }
 
 .icon {
