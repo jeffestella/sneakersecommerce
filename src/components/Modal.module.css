@@ -73,13 +73,11 @@
 .previousbtn {
     position: relative;
     left: 27.5px;
-    color: red;
 }
 
 .nextbtn {
     position: relative;
     right: 27.5px;
-    color: red;
 }
 
 .arrowbtn:hover {
@@ -103,7 +101,6 @@
 }
 
 .thumbnail {
-    /* border: 1px solid rgba(0,0,0,0); */
     width: 80px;
     height: 80px;
     border-radius: 10px;
@@ -113,15 +110,11 @@
 }
 
 .thumbnail img {
-    /* border: 1px solid rgba(0,0,0,0); */
-    position: relative;
-    top:0;
-    left:0;
-    width: 80px;
-    height: 80px;
+    width: 100%;
     border-radius: 10px;
     
 }
+
 .thumbnail img:hover {
     opacity: 0.5;
 }

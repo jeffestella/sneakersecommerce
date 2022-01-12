@@ -22,6 +22,7 @@
 }
 
 .thumbnails {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -30,17 +31,28 @@
 }
 
 .thumbnail {
-    width: 20%;
+    border: 2px solid rgba(0,0,0,0);
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
 
     cursor: pointer;
 }
 
-.thumbnail:hover {
+.thumbnail img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.thumbnail img:hover {
     opacity: 0.5;
 }
 
 .selected {
+    border: 2px solid var(--orange);
+}
+
+.selected img {
     opacity: 0.3;
-    border: 1px solid var(--orange);
 }

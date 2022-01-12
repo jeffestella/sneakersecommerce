@@ -39,16 +39,20 @@ const PhotoBox = () => {
 
     const thumbs = photos.map((photo) => {
         return (
-            <img 
+            <div
                 className={`
-                    ${currentPhoto===photo.photo ?
+                    ${currentPhoto === photo.photo ?
                         photoBoxStyles.selected :
                         ''
                     } ${photoBoxStyles.thumbnail}`}
-                src={photo.thumb} 
-                alt={photo.alt} 
-                onClick={() => {setCurrentPhoto(photo.photo)}}
-            />
+            >
+                <img
+                    src={photo.thumb}
+                    alt={photo.alt}
+                    onClick={() => { setCurrentPhoto(photo.photo) }}
+
+                />
+            </div>
         )
     })
 
