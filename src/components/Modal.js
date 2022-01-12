@@ -25,14 +25,14 @@ const Modal = ( { modalActive, setModalActive, photos, firstPhoto }) => {
 
     return(
         <div 
-            className={modalStyles.container}
+            className={`${modalStyles.container} 
+                ${
+                    !modalActive ?
+                    modalStyles.inactive :
+                    ''
+                }
+            `}
         >
-        <p>
-            {modalActive ?
-                'active' :
-                'inactive'
-            }
-        </p>
             <div className={modalStyles.content}>
                 <img 
                     src={iconClose} 

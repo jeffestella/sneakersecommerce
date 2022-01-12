@@ -35,7 +35,7 @@ const PhotoBox = () => {
     ]
 
     const [currentPhoto, setCurrentPhoto] = useState(productPhoto1);
-    const [modalActive, setModalActive] = useState(true);
+    const [modalActive, setModalActive] = useState(false);
 
     const thumbs = photos.map((photo) => {
         return (
