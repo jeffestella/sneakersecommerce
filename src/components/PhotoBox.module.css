@@ -42,4 +42,5 @@
 
 .selected {
     opacity: 0.3;
+    border: 1px solid var(--orange);
 }

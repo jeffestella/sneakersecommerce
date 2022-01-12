@@ -4,22 +4,25 @@ import iconClose from '../assets/icon-close.svg';
 import iconPrevious from '../assets/icon-previous.svg';
 import iconNext from '../assets/icon-next.svg';
 
-const Modal = ( { modalActive, setModalActive, photos, firstPhoto }) => {
-    const [currentPhoto, setCurrentPhoto] = useState(firstPhoto);
+const Modal = ( { modalActive, setModalActive, photos, outerPhoto }) => {
+    const [currentPhoto, setCurrentPhoto] = useState(outerPhoto);
 
     const thumbs = photos.map( (photo) => {
         return (
-            <img 
-                classname={`
-                    ${currentPhoto===photo.photo ?
+            <div
+                className={`
+                    ${currentPhoto === photo.photo ?
                         modalStyles.selected :
                         ''
                     } ${modalStyles.thumbnail}`}
-                src={photo.thumb} 
-                alt={photo.alt}
-                onClick={() => {setCurrentPhoto(photo.photo)}}
-
-            />
+            >
+                <img 
+                    src={photo.thumb} 
+                    alt={photo.alt}
+                    onClick={() => {setCurrentPhoto(photo.photo)}}
+                    
+                    />
+            </div>
         )
     })
 
@@ -35,24 +38,35 @@ const Modal = ( { modalActive, setModalActive, photos, firstPhoto }) => {
         >
             <div className={modalStyles.content}>
                 <img 
+                    className={modalStyles.closebtn}
                     src={iconClose} 
                     alt="X button to close"
                     onClick={()=> {setModalActive(false)}}
                 />
                 <div className={modalStyles.current}>
-                    <img 
+                    <button className={`
+                        ${modalStyles.arrowbtn}
+                        ${modalStyles.previousbtn}
+                    `} >
+                        <img 
                         src={iconPrevious} 
                         alt="arrow (previous)" 
-                    
-                    />
+                        />
+                    </button>
                     <img 
+                        className={modalStyles.currentphoto}
                         src={currentPhoto} 
                         alt="sneakers">
                     </img>
-                    <img
-                        src={iconNext}
-                        alt="arrow (next)"
-                    />
+                    <button className={`
+                        ${modalStyles.arrowbtn}
+                        ${modalStyles.nextbtn}
+                    `} >
+                        <img
+                            src={iconNext}
+                            alt="arrow (next)"
+                        />
+                    </button>
                 </div>
                 <div className={modalStyles.thumbnails}>
                     {thumbs}
