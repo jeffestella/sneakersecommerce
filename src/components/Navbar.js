@@ -20,8 +20,7 @@ const Navbar = () => {
             </div>
             <div className={navbarStyles.right}>
                 <Cart 
-                    className={navbarStyles.cart} 
-                    badge={0}
+                    badgeQty={3}
                 />
                 <UserIcon 
                     className={navbarStyles.avatar}

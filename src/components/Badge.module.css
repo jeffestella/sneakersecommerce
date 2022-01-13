@@ -1,0 +1,17 @@
+.container {
+    padding: 1px;
+    margin: 0;
+    width: 16px;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 72%;
+    left: 40%;
+
+    background-color: var(--orange);
+    color: var(--white);
+
+    font-size: 0.6rem;
+    /* font-weight: bold; */
+    text-align: center;
+    line-height: 0.6rem;
+}

@@ -1,0 +1,10 @@
+.container {
+    /* border: 1px solid red; */
+    margin: 3%;
+    position: relative;
+}
+
+.cart {
+    padding: 0 5% 0 0;
+    cursor: pointer;
+}
