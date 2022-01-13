@@ -71,7 +71,7 @@
 }
 
 .avatar {
-    width: 50px;
+    width: 45px;
     height: auto;
     cursor: pointer;
 
@@ -83,7 +83,3 @@
     border: 2px solid var(--orange);
 }
 
-.cart {
-    padding: 0 5% 0 0;
-    cursor: pointer;
-}

@@ -1,10 +1,20 @@
 import React from 'react';
+import CTABtn from './CTABtn';
 import cartDropdownStyles from './CartDropdown.module.css';
 
-const CartDropdown = () => {
+const CartDropdown = ({ cartDropdownActive, setCartDropdownActive }) => {
     return(
-        <div>
-            Cart Dropdown
+        <div className={`
+            ${!cartDropdownActive ? 
+                cartDropdownStyles.inactive :
+                '' 
+            }
+        ${cartDropdownStyles.container}`}>
+            Cart
+            <hr />
+            <CTABtn 
+                text='Checkout'
+            />
         </div>
     );
 }
