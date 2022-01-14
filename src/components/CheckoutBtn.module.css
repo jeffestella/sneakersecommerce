@@ -10,4 +10,10 @@
     font-size: 0.8rem;
     letter-spacing: 0.5px;
     font-weight: bold;
+
+    cursor: pointer;
+}
+
+.container:hover {
+    background-color: var(--faded-orange);
 }

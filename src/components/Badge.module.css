@@ -15,3 +15,7 @@
     text-align: center;
     line-height: 0.6rem;
 }
+
+.inactive {
+    visibility: hidden;
+}

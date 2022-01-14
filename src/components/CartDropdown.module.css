@@ -16,3 +16,7 @@
 .inactive {
     visibility: hidden;
 }
+
+.delete {
+    cursor: pointer;
+}

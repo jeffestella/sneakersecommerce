@@ -5,7 +5,7 @@ import avatar from '../assets/image-avatar.png';
 // import logo from '../assets/logo.svg';
 import navbarStyles from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = ({ cartQty, setCartQty }) => {
     return (
         <div className={navbarStyles.container}>
             <div className={navbarStyles.left}>
@@ -20,7 +20,8 @@ const Navbar = () => {
             </div>
             <div className={navbarStyles.right}>
                 <Cart 
-                    badgeQty={3}
+                    cartQty={cartQty}
+                    setCartQty={setCartQty}
                 />
                 <UserIcon 
                     className={navbarStyles.avatar}

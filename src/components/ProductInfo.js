@@ -18,7 +18,10 @@ const ProductInfo = (props) => {
                 <h3 className={productInfoStyes.original}>{props.priceOriginal}</h3>
             </div>
             <div className={productInfoStyes.clickables}>
-                <QtyCounter />
+                <QtyCounter 
+                    cartQty={props.cartQty} 
+                    setCartQty={props.setCartQty}
+                />
                 <CTABtn 
                     icon={iconCart}
                     text="Add to cart"

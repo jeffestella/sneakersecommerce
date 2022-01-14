@@ -22,7 +22,7 @@ const QtyBtn = ({ symbol, quantity, setQuantity, alt }) => {
     );
 }
 
-const QtyCounter = () => {
+const QtyCounter = ({ cartQty, setCartQty }) => {
     const [quantity, setQuantity] = useState(1);
 
     return (

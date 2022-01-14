@@ -1,10 +1,15 @@
 import React from 'react';
 import badgeStyles from './Badge.module.css';
 
-const Badge = ({ qty }) => {
+const Badge = ({ cartQty }) => {
     return (
-        <div className={badgeStyles.container}>
-            {qty}
+        <div className={`
+        ${cartQty < 1 ?
+            badgeStyles.inactive:
+            ''
+        }
+        ${badgeStyles.container}`}>
+            {cartQty}
         </div>
     )
 }

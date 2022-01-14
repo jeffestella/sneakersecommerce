@@ -1,12 +1,19 @@
+import React, { useState } from 'react';
 import Navbar from './Navbar';
 import PhotoBox from './PhotoBox';
 import ProductInfo from './ProductInfo';
 import appStyles from './App.module.css';
 
+
 const App = () => {
+  const [cartQty, setCartQty] = useState(2);
+
   return (
     <div className={appStyles.container}>
-      <Navbar />
+      <Navbar 
+        cartQty={cartQty} 
+        setCartQty={setCartQty}
+        />
       <div className={appStyles.content}>
         <PhotoBox />
         <ProductInfo 
@@ -16,6 +23,8 @@ const App = () => {
           priceCurrent="$125.00"
           discount="50%"
           priceOriginal="$250.00"
+          cartQty={cartQty}
+          setCartQty={setCartQty}
           />
       </div>
     </div>
