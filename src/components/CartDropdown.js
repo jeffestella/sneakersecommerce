@@ -4,15 +4,6 @@ import iconDelete from '../assets/icon-delete.svg';
 import cartDropdownStyles from './CartDropdown.module.css';
 
 const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty }) => {
-    const cartContents = () => {
-        return(
-            <>
-                <div>Product Info Here</div>
-                <CheckoutBtn />
-            </>
-        )
-    }
-
     return(
         <div className={`
             ${!cartDropdownActive ? 

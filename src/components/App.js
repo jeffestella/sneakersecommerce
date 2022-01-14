@@ -4,7 +4,6 @@ import PhotoBox from './PhotoBox';
 import ProductInfo from './ProductInfo';
 import appStyles from './App.module.css';
 
-import photoBoxStyles from './PhotoBox.module.css';
 import productPhoto1 from '../assets/image-product-1.jpg';
 import productPhoto2 from '../assets/image-product-2.jpg';
 import productPhoto3 from '../assets/image-product-3.jpg';
