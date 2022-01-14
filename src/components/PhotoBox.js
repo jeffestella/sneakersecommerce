@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
 import photoBoxStyles from './PhotoBox.module.css';
-import productPhoto1 from '../assets/image-product-1.jpg';
-import productPhoto2 from '../assets/image-product-2.jpg';
-import productPhoto3 from '../assets/image-product-3.jpg';
-import productPhoto4 from '../assets/image-product-4.jpg';
-import productThumb1 from '../assets/image-product-1-thumbnail.jpg';
-import productThumb2 from '../assets/image-product-2-thumbnail.jpg';
-import productThumb3 from '../assets/image-product-3-thumbnail.jpg';
-import productThumb4 from '../assets/image-product-4-thumbnail.jpg';
 import Modal from './Modal';
 
 const PhotoBox = ({ photos }) => {
-
-    const [currentPhoto, setCurrentPhoto] = useState(productPhoto1);
+    const defaultPhoto = photos[0].photo
+    const [currentPhoto, setCurrentPhoto] = useState(defaultPhoto);
     const [modalActive, setModalActive] = useState(false);
 
     const thumbs = photos.map((photo) => {

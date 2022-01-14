@@ -57,7 +57,9 @@ const App = () => {
         setCartQty={setCartQty}
         />
       <div className={appStyles.content}>
-        <PhotoBox photos={products[0].photos}/>
+        <PhotoBox 
+          photos={products[0].photos}
+        />
         <ProductInfo 
           manufacturer={products[0].manufacturer}
           name={products[0].name} 
