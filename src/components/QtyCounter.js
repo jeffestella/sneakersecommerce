@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import iconMinus from '../assets/icon-minus.svg';
 import iconPlus from '../assets/icon-plus.svg';
 import qtyCounterStyles from './QtyCounter.module.css';
