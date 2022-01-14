@@ -21,7 +21,7 @@ const App = () => {
       manufacturer: 'Sneaker Company',
       blurb: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.",
       priceCurrent: 125,
-      discount: 50,
+      discount: 0.5,
       priceOriginal: 250,
       photos: [
         {
