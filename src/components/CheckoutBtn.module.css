@@ -1,0 +1,13 @@
+.container {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--orange);
+    color: var(--white);
+
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}

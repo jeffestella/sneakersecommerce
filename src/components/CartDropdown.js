@@ -1,5 +1,5 @@
 import React from 'react';
-import CTABtn from './CTABtn';
+import CheckoutBtn from './CheckoutBtn';
 import cartDropdownStyles from './CartDropdown.module.css';
 
 const CartDropdown = ({ cartDropdownActive, setCartDropdownActive }) => {
@@ -12,9 +12,7 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive }) => {
         ${cartDropdownStyles.container}`}>
             Cart
             <hr />
-            <CTABtn 
-                text='Checkout'
-            />
+            <CheckoutBtn />
         </div>
     );
 }
