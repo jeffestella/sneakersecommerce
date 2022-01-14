@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState} from 'react';
 import QtyCounter from './QtyCounter';
 import CTABtn from './CTABtn'
 import productInfoStyes from './ProductInfo.module.css';
 import iconCart from '../assets/icon-cart.svg';
 
 const ProductInfo = (props) => {
+    const [addQty, setAddQty] = useState(1);
+
     return(
         <div className={productInfoStyes.container}>
             <h3 className={productInfoStyes.company}>{props.manufacturer}</h3>
@@ -19,12 +21,16 @@ const ProductInfo = (props) => {
             </div>
             <div className={productInfoStyes.clickables}>
                 <QtyCounter 
-                    cartQty={props.cartQty} 
-                    setCartQty={props.setCartQty}
+                    addQty={addQty}
+                    setAddQty={setAddQty}
                 />
                 <CTABtn 
                     icon={iconCart}
                     text="Add to cart"
+                    addQty={addQty}
+                    setAddQty={setAddQty}
+                    cartQty={props.cartQty}
+                    setCartQty={props.setCartQty}
                 />
             </div>
         </div>
