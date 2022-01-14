@@ -10,29 +10,7 @@ import productThumb3 from '../assets/image-product-3-thumbnail.jpg';
 import productThumb4 from '../assets/image-product-4-thumbnail.jpg';
 import Modal from './Modal';
 
-const PhotoBox = () => {
-    const photos = [
-        {
-            photo: productPhoto1,
-            thumb: productThumb1,
-            alt: "white and brown sneakers"
-        },
-        {
-            photo: productPhoto2,
-            thumb: productThumb2,
-            alt: "white and brown sneakers"
-        },
-        {
-            photo: productPhoto3,
-            thumb: productThumb3 ,
-            alt: "white and brown sneakers"
-        },
-        {
-            photo: productPhoto4,
-            thumb: productThumb4,
-            alt: "white and brown sneakers"
-        },
-    ]
+const PhotoBox = ({ photos }) => {
 
     const [currentPhoto, setCurrentPhoto] = useState(productPhoto1);
     const [modalActive, setModalActive] = useState(false);

@@ -25,7 +25,9 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
             { cartQty > 0 ?
             <>
                 <div>
-                    Product Info Here
+                    <span>
+                        Product Info Here
+                    </span>
                     <img
                         className={cartDropdownStyles.delete} 
                         src={iconDelete} 
