@@ -6,7 +6,7 @@ import appStyles from './App.module.css';
 
 
 const App = () => {
-  const [cartQty, setCartQty] = useState(2);
+  const [cartQty, setCartQty] = useState(0);
 
   return (
     <div className={appStyles.container}>
