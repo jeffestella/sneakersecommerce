@@ -48,6 +48,7 @@ const App = () => {
     }
   ]
   const [cartQty, setCartQty] = useState(0);
+  const [productID, setProductID] = useState(0);
 
   return (
     <div className={appStyles.container}>
@@ -57,15 +58,15 @@ const App = () => {
         />
       <div className={appStyles.content}>
         <PhotoBox 
-          photos={products[0].photos}
+          photos={products[productID].photos}
         />
         <ProductInfo 
-          manufacturer={products[0].manufacturer}
-          name={products[0].name} 
-          blurb={products[0].blurb}
-          priceCurrent={products[0].priceCurrent}
-          discount={products[0].discount}
-          priceOriginal={products[0].priceOriginal}
+          manufacturer={products[productID].manufacturer}
+          name={products[productID].name} 
+          blurb={products[productID].blurb}
+          priceCurrent={products[productID].priceCurrent}
+          discount={products[productID].discount}
+          priceOriginal={products[productID].priceOriginal}
           cartQty={cartQty}
           setCartQty={setCartQty}
           />
