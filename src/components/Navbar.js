@@ -5,7 +5,7 @@ import avatar from '../assets/image-avatar.png';
 // import logo from '../assets/logo.svg';
 import navbarStyles from './Navbar.module.css';
 
-const Navbar = ({ cartQty, setCartQty }) => {
+const Navbar = ({ cartQty, setCartQty, productData }) => {
     return (
         <div className={navbarStyles.container}>
             <div className={navbarStyles.left}>
@@ -22,6 +22,7 @@ const Navbar = ({ cartQty, setCartQty }) => {
                 <Cart 
                     cartQty={cartQty}
                     setCartQty={setCartQty}
+                    productData={productData}
                 />
                 <UserIcon 
                     className={navbarStyles.avatar}

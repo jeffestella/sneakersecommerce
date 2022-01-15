@@ -55,6 +55,7 @@ const App = () => {
       <Navbar 
         cartQty={cartQty} 
         setCartQty={setCartQty}
+        productData={products[productID]}
         />
       <div className={appStyles.content}>
         <PhotoBox 

@@ -4,7 +4,7 @@ import Badge from './Badge.js'
 import iconCart from '../assets/icon-cart.svg';
 import cartStyles from './Cart.module.css';
 
-const Cart = ({ cartQty, setCartQty }) => {
+const Cart = ({ cartQty, setCartQty, productData }) => {
     const [cartDropdownActive, setCartDropdownActive] = useState(false);
 
     return(
@@ -24,6 +24,7 @@ const Cart = ({ cartQty, setCartQty }) => {
                 setCartDropdownActive={setCartDropdownActive}
                 cartQty={cartQty}
                 setCartQty={setCartQty}
+                productData={productData}
             />
         </div>
     );

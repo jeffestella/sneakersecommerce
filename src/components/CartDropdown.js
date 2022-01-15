@@ -1,9 +1,9 @@
 import React from 'react';
 import CheckoutBtn from './CheckoutBtn';
-import iconDelete from '../assets/icon-delete.svg';
+import CartCard from './CartCard';
 import cartDropdownStyles from './CartDropdown.module.css';
 
-const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty }) => {
+const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty, productData }) => {
     return(
         <div className={`
             ${!cartDropdownActive ? 
@@ -11,26 +11,17 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
                 '' 
             }
         ${cartDropdownStyles.container}`}>
-            <p>Cart</p>
+            <p className={cartDropdownStyles.title}>Cart</p>
             <hr />
             { cartQty > 0 ?
-            <>
-                <div>
-                    <span>
-                        Product Info Here
-                    </span>
-                    <img
-                        className={cartDropdownStyles.delete} 
-                        src={iconDelete} 
-                        alt="trash button"  
-                        onClick={() => {
-                            setCartQty(0);
-                            // setCartDropdownActive(false);
-                        }}    
-                    />
-                </div>
+            <div className={cartDropdownStyles.below}>
+                <CartCard 
+                    cartQty={cartQty}
+                    setCartQty={setCartQty}
+                    productData={productData}
+                />
                 <CheckoutBtn /> 
-            </> :
+            </div> :
                 <p>Your cart is empty</p>
             }
         </div>
