@@ -5,7 +5,7 @@ import productInfoStyes from './ProductInfo.module.css';
 import iconCart from '../assets/icon-cart.svg';
 
 const ProductInfo = (props) => {
-    const [addQty, setAddQty] = useState(1);
+    const [addQty, setAddQty] = useState(0);
 
     return(
         <div className={productInfoStyes.container}>

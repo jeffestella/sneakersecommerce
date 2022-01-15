@@ -7,7 +7,7 @@ const CTABtn = ({ icon, text, addQty, setAddQty, cartQty, setCartQty }) => {
             className={ctaBtnStyles.container}
             onClick={() => {
                 setCartQty(cartQty + addQty);
-                setAddQty(1);
+                setAddQty(0);
             }}
         >
             <span>

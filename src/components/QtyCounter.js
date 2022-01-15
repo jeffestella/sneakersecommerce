@@ -10,8 +10,8 @@ const QtyBtn = ({ symbol, addQty, setAddQty, alt }) => {
                 // Alter function of button depending on "plus" or "minus" alt text
                 //If "minus", don't allow quantity to go below 1
                 alt === "minus" ?
-                    addQty-1 < 1 ?
-                    addQty(1) :
+                    addQty-1 < 0 ?
+                    addQty(0) :
                     setAddQty(addQty-1) 
                 : setAddQty(addQty+1)
             }}

@@ -10,7 +10,7 @@
 
 .container {
     /* border: 1px solid blue; */
-    width: 90vw;
+    width: clamp(376px, 90vw, 1440px);
     height: clamp(500px, 95vh, 710px);
     /* height: 725px; */
     margin: 0 9%;
