@@ -3,8 +3,9 @@
     padding: 0;
     /* border: 1px solid red; */
 
-    width: 30%;
-    height: 90%;
+    width: clamp(390px, 30%, 400px);
+    height: clamp(500px, 90%, 700px);
+    /* height: 510px; */
 
     display: flex;
     flex-direction: column;

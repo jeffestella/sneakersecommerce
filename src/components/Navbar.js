@@ -5,12 +5,12 @@ import avatar from '../assets/image-avatar.png';
 // import logo from '../assets/logo.svg';
 import navbarStyles from './Navbar.module.css';
 
-const Navbar = ({ cartQty, setCartQty, productData }) => {
+const Navbar = ({ cartQty, setCartQty, productData, cName }) => {
     return (
         <div className={navbarStyles.container}>
             <div className={navbarStyles.left}>
                 <h1>sneakers</h1>
-                <div className={navbarStyles.links}>
+                <div className={`${navbarStyles.links} ${cName}`}>
                     <a href="./collections">Collections</a>
                     <a href="/">Men</a>
                     <a href="/">Women</a>

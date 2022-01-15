@@ -27,6 +27,7 @@
 hr {
     color: var(--light-grayish-blue);
     border: 0.1px solid var(--grayish-blue);
+    margin: 0;
 }
 
 .inactive {
@@ -41,12 +42,13 @@ hr {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .empty {
     /* border: 1px solid red; */
+    margin: 0;
     height: 140px;
     display: flex;
     justify-content: center;
