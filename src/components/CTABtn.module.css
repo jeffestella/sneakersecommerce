@@ -20,5 +20,6 @@ button.container:hover {
 .icon {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(189deg) brightness(106%) contrast(101%);
 
-    margin-right: 5%;
+    margin-right: 6%;
+    width: 15px;
 }
