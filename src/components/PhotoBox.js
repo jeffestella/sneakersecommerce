@@ -15,6 +15,7 @@ const PhotoBox = ({ photos }) => {
                         photoBoxStyles.selected :
                         ''
                     } ${photoBoxStyles.thumbnail}`}
+                key={photo.thumb}
             >
                 <img
                     src={photo.thumb}

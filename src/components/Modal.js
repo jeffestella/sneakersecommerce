@@ -15,6 +15,7 @@ const Modal = ( { modalActive, setModalActive, photos, outerPhoto }) => {
                         modalStyles.selected :
                         ''
                     } ${modalStyles.thumbnail}`}
+                key={photo.thumb}
             >
                 <img 
                     src={photo.thumb} 

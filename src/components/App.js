@@ -62,6 +62,10 @@ const App = () => {
           photos={products[productID].photos}
         />
         <ProductInfo 
+          // productID and setProductID never changes since this project only has one product
+          // can be used when we need to add more products
+          productID={productID}
+          setProductID={setProductID}
           manufacturer={products[productID].manufacturer}
           name={products[productID].name} 
           blurb={products[productID].blurb}
