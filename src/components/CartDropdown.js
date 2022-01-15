@@ -22,7 +22,7 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
                 />
                 <CheckoutBtn /> 
             </div> :
-                <p>Your cart is empty</p>
+                <p className={cartDropdownStyles.empty}>Your cart is empty.</p>
             }
         </div>
     );

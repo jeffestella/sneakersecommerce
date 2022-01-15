@@ -24,7 +24,7 @@
 }
 
 hr {
-    color: var(--grayish-blue);
+    color: var(--light-grayish-blue);
     border: 0.1px solid var(--grayish-blue);
 }
 
@@ -42,4 +42,16 @@ hr {
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.empty {
+    /* border: 1px solid red; */
+    height: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.25px;
 }
