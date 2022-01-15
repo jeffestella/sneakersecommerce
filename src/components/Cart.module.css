@@ -1,10 +1,15 @@
 .container {
     /* border: 1px solid red; */
-    margin: 3%;
+    margin-right: 8%;
     position: relative;
 }
 
 .cart {
     padding: 0 5% 0 0;
     cursor: pointer;
+}
+
+.cart:hover {
+    /* filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(285deg) brightness(94%) contrast(97%); */
+    filter: brightness(0) saturate(100%);
 }

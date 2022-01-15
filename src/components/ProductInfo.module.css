@@ -14,7 +14,7 @@
 .company {
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     color: var(--medium-orange);
     /* color: var(--pale-orange); */
 }
