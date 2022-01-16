@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import navbarStyles from './Navbar.module.css';
 import Cart from './Cart';
+import MobileNav from './MobileNav';
 import UserIcon from './UserIcon';
 import avatar from '../assets/image-avatar.png';
-// import logo from '../assets/logo.svg';
-import navbarStyles from './Navbar.module.css';
+import iconMenu from '../assets/icon-menu.svg';
 
-const Navbar = ({ cartQty, setCartQty, productData, cName }) => {
+const Navbar = ({ cartQty, setCartQty, productData }) => {
+    const [navActive, setNavActive] = useState(true);
+
     return (
         <div className={navbarStyles.container}>
+            <MobileNav 
+                navActive={navActive}
+                setNavActive={setNavActive}
+            />
+            <button 
+                className={navbarStyles.menuBtn}
+                onClick={() => setNavActive(true)}
+            >
+                <img src={iconMenu} alt="menubutton" />
+            </button>
             <div className={navbarStyles.left}>
                 <h1>sneakers</h1>
-                <div className={`${navbarStyles.links} ${cName}`}>
+                <div className={navbarStyles.links}>
                     <a href="./collections">Collections</a>
                     <a href="/">Men</a>
                     <a href="/">Women</a>

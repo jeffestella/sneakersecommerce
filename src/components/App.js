@@ -56,7 +56,6 @@ const App = () => {
         cartQty={cartQty} 
         setCartQty={setCartQty}
         productData={products[productID]}
-        cName={appStyles.nav}
         />
       <div className={appStyles.content}>
         <PhotoBox 

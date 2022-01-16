@@ -12,6 +12,16 @@
 
 }
 
+.menuBtn {
+    border: none;
+    margin: 0 1%;
+    background-color: var(--white);
+
+    cursor: pointer;
+    display: none;
+}
+
+
 .left {
     /* border: 1px solid red; */
     width: 60%;
@@ -84,3 +94,14 @@
     border: 2px solid var(--orange);
 }
 
+@media screen and (max-width: 375px) {
+    .menuBtn {
+        display: flex;
+        align-items: center;
+    }
+
+    .left .links {
+        display: none;
+    }
+
+}
