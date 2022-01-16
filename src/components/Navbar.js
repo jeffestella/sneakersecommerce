@@ -7,21 +7,21 @@ import avatar from '../assets/image-avatar.png';
 import iconMenu from '../assets/icon-menu.svg';
 
 const Navbar = ({ cartQty, setCartQty, productData }) => {
-    const [navActive, setNavActive] = useState(true);
+    const [navActive, setNavActive] = useState(false);
 
     return (
         <div className={navbarStyles.container}>
-            <MobileNav 
+            <MobileNav
                 navActive={navActive}
                 setNavActive={setNavActive}
             />
-            <button 
-                className={navbarStyles.menuBtn}
-                onClick={() => setNavActive(true)}
-            >
-                <img src={iconMenu} alt="menubutton" />
-            </button>
             <div className={navbarStyles.left}>
+                <button
+                    className={navbarStyles.menuBtn}
+                    onClick={() => setNavActive(true)}
+                >
+                    <img src={iconMenu} alt="menubutton" />
+                </button>
                 <h1>sneakers</h1>
                 <div className={navbarStyles.links}>
                     <a href="./collections">Collections</a>

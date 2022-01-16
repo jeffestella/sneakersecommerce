@@ -12,7 +12,7 @@ const ProductInfo = (props) => {
             <h3 className={productInfoStyes.company}>{props.manufacturer}</h3>
             <h1 className={productInfoStyes.name}>{props.name}</h1>
             <p className={productInfoStyes.blurb}>{props.blurb}</p>
-            <div> 
+            <div className={productInfoStyes.prices}> 
                 <div className={productInfoStyes.current}> 
                     <span className={productInfoStyes.price}>{`$${props.priceCurrent}.00`}</span>
                     <span className={productInfoStyes.discount}>{`${props.discount*100}%`}</span>
