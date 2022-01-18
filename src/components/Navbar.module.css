@@ -118,6 +118,7 @@
 
     .left h1 {
         /* border: 1px solid blue; */
+        padding-top: 5px;
         display: flex;
         align-items: center;
         justify-content: center;

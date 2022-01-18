@@ -58,3 +58,11 @@ hr {
     color: var(--dark-grayish-blue);
     letter-spacing: 0.25px;
 }
+
+@media screen and (max-width: 375px) {
+    .container {
+        top: 55px;
+        width: 350px;
+        left: calc(-1 * var(--dropdown-width) * .8325);
+    }
+}

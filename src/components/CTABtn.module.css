@@ -1,6 +1,7 @@
 button.container {
     /* width and height specified by CSS of its parent component */
     width: 60%;
+    height: 45px;
     border: none;
     border-radius: 10px;
 
@@ -36,7 +37,7 @@ button.container:hover {
     }
 
     .icon {
-        border: 1px solid red;
+        /* border: 1px solid red; */
         width: 20px;
     }
 }

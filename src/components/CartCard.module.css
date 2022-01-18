@@ -36,3 +36,9 @@
     margin: 0 3%;
     color: var(--black);
 }
+
+@media screen and (max-width: 375px) {
+    .text p {
+        font-size: 1rem;
+    }
+}
