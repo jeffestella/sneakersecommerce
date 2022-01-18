@@ -1,11 +1,11 @@
 .container {
     /* border: 1px solid red; */
-    margin-right: 8%;
+    margin-right: 20%;
     position: relative;
+    cursor: pointer;
 }
 
 .cart {
-    padding: 0 5% 0 0;
     cursor: pointer;
 }
 

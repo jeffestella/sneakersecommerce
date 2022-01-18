@@ -4,6 +4,7 @@
     /* border: 1px solid red; */
     border-bottom: 2px solid var(--light-grayish-blue);
     width: 90%;
+    height: 100px;
 
     display: flex;
     flex-direction: row;
@@ -30,14 +31,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
 
 }
 
 .left h1 {
-    /* border: 1px solid red; */
+    padding: 0 0 15px 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .left .links {

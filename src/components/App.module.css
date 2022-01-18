@@ -14,7 +14,7 @@
 
 .content {
     /* border: 1px solid green; */
-    /* height: clamp(400px, 80%, 600px); */
+    height: clamp(400px, 80%, 600px);
     width: 100%;
     /* padding: 5% 0; */
 
