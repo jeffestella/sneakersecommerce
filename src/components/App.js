@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
-import PhotoBox from './PhotoBox';
+// import PhotoBox from './PhotoBox';
+import PhotoDock from './PhotoDock';
 import ProductInfo from './ProductInfo';
 import appStyles from './App.module.css';
 
@@ -58,9 +59,12 @@ const App = () => {
         productData={products[productID]}
         />
       <div className={appStyles.content}>
-        <PhotoBox 
+        <PhotoDock 
           photos={products[productID].photos}
         />
+        {/* <PhotoBox 
+          photos={products[productID].photos}
+        /> */}
         <ProductInfo 
           // productID and setProductID never changes since this project only has one product
           // can be used when we need to add more products

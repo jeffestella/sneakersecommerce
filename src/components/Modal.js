@@ -4,8 +4,8 @@ import iconClose from '../assets/icon-close.svg';
 import iconPrevious from '../assets/icon-previous.svg';
 import iconNext from '../assets/icon-next.svg';
 
-const Modal = ( { modalActive, setModalActive, photos, outerPhoto }) => {
-    const [currentPhoto, setCurrentPhoto] = useState(outerPhoto);
+const Modal = ( { modalActive, setModalActive, photos, defaultPhoto }) => {
+    const [currentPhoto, setCurrentPhoto] = useState(defaultPhoto);
 
     const thumbs = photos.map( (photo) => {
         return (

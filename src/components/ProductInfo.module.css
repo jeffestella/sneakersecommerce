@@ -1,9 +1,8 @@
 .container {
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
-    width: clamp(390px, 30%, 400px);
-    
-    /* border: 1px solid red; */
+    width: clamp(390px, 35%, 450px);
 
     display: flex;
     flex-direction: column;
@@ -13,27 +12,31 @@
 }
 
 .company {
+    margin: 0 0 4% 0;
     font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.9px;
     color: var(--medium-orange);
     /* color: var(--pale-orange); */
 }
 
 .name {
     margin: 0 0 8%;
-    font-size: 2.35rem;
+    font-size: 2.6rem;
+    letter-spacing: 0.5px;
+    line-height: 2.85rem;
 }
 
 .blurb {
     margin: 0 0 5.5%;
     color: var(--dark-grayish-blue);
     font-size: 0.9rem;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
 }
 
 .current {
     /* border: 1px solid red; */
+    margin: 0 0 2.5% 0;
     width: 100%;
 
     display: flex;
@@ -43,6 +46,7 @@
 .price {
     font-size: 1.7rem;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .discount {
@@ -61,6 +65,7 @@
     font-size: 0.85rem;
     color: var(--grayish-blue);
     text-decoration: line-through;
+    letter-spacing: 1px;;
 }
 
 .clickables {
@@ -84,12 +89,13 @@
     }
 
     .company {
-        margin: 0 0 4% 0;
+        font-size: 0.8rem;
     }
 
     .name {
         font-size: 1.7rem;
         margin: 0 0 5%;
+        line-height: 2rem;
     }
 
     .blurb {
