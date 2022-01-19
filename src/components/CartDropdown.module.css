@@ -9,6 +9,7 @@
     position: absolute;
     top: 40px;
     left: calc( -1 * var(--dropdown-width)/2);
+    z-index: 10;
 
     background-color: var(--white);
     box-shadow: 1px 20px 35px 2px var(--grayish-blue)

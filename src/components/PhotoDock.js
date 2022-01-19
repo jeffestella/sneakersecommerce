@@ -91,6 +91,13 @@ const PhotoDock = ({ photos }) => {
                         alt="sneakers">
                     </img>
                 </div>
+                <div className={photoDockStyles.mainPhotoMobile}>
+                    <img
+                        className={photoDockStyles.currentphoto}
+                        src={currentPhoto}
+                        alt="sneakers">
+                    </img>
+                </div>
                 <button
                     className={`
                             ${photoDockStyles.arrowBtn}

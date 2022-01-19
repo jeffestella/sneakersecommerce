@@ -1,12 +1,12 @@
 .container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
 
     width: clamp(390px, 30%, 450px);
     /* height: clamp(500px, 80%, 550px); */
-    height: 465px;
+    height: 510px;
 
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
 }
 
 .main {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
 
     display: flex;
@@ -30,21 +30,15 @@
 
 .mainPhoto img {
     width: 100%;
+    border-radius: 20px;
+}
+
+.mainPhotoMobile {
+    display: none;
 }
 
 .arrowBtn {
-    border: none;
-    width: 50px;
-    height: 30px;
-}
-
-.previousBtn {
-    position: relative;
-    left: -30px;
-}
-
-.nextBtn {
-
+    display: none;
 }
 
 .thumbnails {
@@ -68,7 +62,64 @@
 }
 
 @media screen and (max-width: 375px) {
+    .container {
+        height: auto;
+    }
+
     .thumbnails {
         display: none;
+    }
+
+    .arrowBtn {
+        position: absolute;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+    }
+
+    .arrowBtn img {
+        scale: 0.8;
+    }
+    .main {
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .mainPhoto {
+        display: none;
+    }
+
+    .mainPhotoMobile {
+        /* border: 1px solid gray; */
+        width: 100%;
+        /* height: 200px; */
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: auto;
+    }
+
+    .mainPhotoMobile img {
+        width: 100%;
+    }
+
+    .previousBtn {
+        left: 12px
+    }
+
+    .nextBtn {
+        right: 12px;
     }
 }
