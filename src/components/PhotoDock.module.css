@@ -51,14 +51,34 @@
 }
 
 .thumbnail {
+    border: 2px solid var(--white);
     width: 20%;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 10px;
+
+    background-color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.thumbnail.selected {
+    border: 2px solid var(--orange);
+}
+
+.thumbnail.selected img {
+    opacity: 0.4;
+
+}
 .thumbnail img {
     width: 100%;
 
+}
+
+.thumbnail:hover img{
+    opacity: 0.5;
 }
 
 @media screen and (max-width: 375px) {
