@@ -10,10 +10,12 @@ const CTABtn = ({ icon, text, addQty, setAddQty, cartQty, setCartQty }) => {
                 setAddQty(0);
             }}
         >
-            <span>
+            <span className={ctaBtnStyles.content}>
                 {icon ? <img className={ctaBtnStyles.icon} src={icon} alt="cart icon" /> : "" }
+                <span>
+                    {text}
+                </span>
             </span>
-            {text}
         </button>
     );
 }
