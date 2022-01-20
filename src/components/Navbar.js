@@ -5,6 +5,7 @@ import MobileNav from './MobileNav';
 import UserIcon from './UserIcon';
 import avatar from '../assets/image-avatar.png';
 import iconMenu from '../assets/icon-menu.svg';
+import logo from '../assets/logo.svg';
 
 const Navbar = ({ cartQty, setCartQty, productData }) => {
     const [navActive, setNavActive] = useState(false);
@@ -22,7 +23,11 @@ const Navbar = ({ cartQty, setCartQty, productData }) => {
                 >
                     <img src={iconMenu} alt="menubutton" />
                 </button>
-                <h1>sneakers</h1>
+                <img
+                    className={navbarStyles.logo} 
+                    src={logo} 
+                    alt="sneakers company logo" 
+                />
                 <div className={navbarStyles.links}>
                     <a href="./collections">Collections</a>
                     <a href="/">Men</a>

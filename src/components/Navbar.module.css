@@ -36,11 +36,13 @@
 
 }
 
-.left h1 {
-    padding: 0 0 15px 0;
+.logo {
+    width: 150px;
+    height: 23px;
+    padding: 3px 0 15px 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
+
+    align-self: center;
 }
 
 .left .links {
@@ -116,12 +118,9 @@
 
     }
 
-    .left h1 {
+    .logo {
         /* border: 1px solid blue; */
-        padding-top: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0 0 5px 5px;
     }
 
     .left .links {

@@ -33,7 +33,7 @@ const PhotoBox = ({ photos }) => {
                 modalActive={modalActive}
                 setModalActive={setModalActive}
                 photos={photos} 
-                defaultPhoto={currentPhoto}
+                outerPhoto={currentPhoto}
                 thumbs={thumbs}
             />
             <div>

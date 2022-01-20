@@ -66,7 +66,7 @@ const PhotoDock = ({ photos }) => {
                 modalActive={modalActive}
                 setModalActive={setModalActive}
                 photos={photos}
-                defaultPhoto={currentPhoto}
+                outerPhoto={currentPhoto}
             />
             <div className={photoDockStyles.main}>
                 <button
