@@ -9,18 +9,22 @@ import { products } from '../data/products';
 
 const App = () => {
   const [cartQty, setCartQty] = useState(0);
-  const [productID, setProductID] = useState(0);
+  const [currentProduct, setCurrentProduct] = useState(
+    products.find((product) => {
+      return product.id === "fles"
+    })
+  );
 
   return (
     <div className={appStyles.container}>
       <Navbar 
         cartQty={cartQty} 
         setCartQty={setCartQty}
-        productData={products[productID]}
+        productData={currentProduct}
         />
       <div className={appStyles.content}>
         <PhotoDock 
-          photos={products[productID].photos}
+          photos={currentProduct.photos}
         />
         {/* <PhotoBox 
           photos={products[productID].photos}
@@ -28,14 +32,13 @@ const App = () => {
         <ProductInfo 
           // productID and setProductID never changes since this project only has one product
           // can be used when we need to add more products
-          productID={productID}
-          setProductID={setProductID}
-          manufacturer={products[productID].manufacturer}
-          name={products[productID].name} 
-          blurb={products[productID].blurb}
-          priceCurrent={products[productID].priceCurrent}
-          discount={products[productID].discount}
-          priceOriginal={products[productID].priceOriginal}
+          setProductID={setCurrentProduct}
+          manufacturer={currentProduct.manufacturer}
+          name={currentProduct.name} 
+          blurb={currentProduct.blurb}
+          priceCurrent={currentProduct.priceCurrent}
+          discount={currentProduct.discount}
+          priceOriginal={currentProduct.priceOriginal}
           cartQty={cartQty}
           setCartQty={setCartQty}
           />

@@ -10,6 +10,7 @@ import productThumb4 from '../assets/image-product-4-thumbnail.jpg';
 export const products = [
     {
         name: "Fall Limited Edition Sneakers",
+        id: "fles",
         manufacturer: 'Sneaker Company',
         blurb: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.",
         priceCurrent: 125,
