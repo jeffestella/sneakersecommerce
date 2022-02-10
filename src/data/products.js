@@ -7,8 +7,8 @@ import productThumb2 from '../assets/image-product-2-thumbnail.jpg';
 import productThumb3 from '../assets/image-product-3-thumbnail.jpg';
 import productThumb4 from '../assets/image-product-4-thumbnail.jpg';
 
-export const products = [
-    {
+const products = {
+    fles: {
         name: "Fall Limited Edition Sneakers",
         id: "fles",
         manufacturer: 'Sneaker Company',
@@ -39,4 +39,6 @@ export const products = [
             }
         ]
     }
-]
+}
+
+export default products;

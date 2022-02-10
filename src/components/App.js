@@ -5,15 +5,11 @@ import PhotoDock from './PhotoDock';
 import ProductInfo from './ProductInfo';
 import appStyles from './App.module.css';
 
-import { products } from '../data/products';
+import products from '../data/products';
 
 const App = () => {
   const [cartQty, setCartQty] = useState(0);
-  const [currentProduct, setCurrentProduct] = useState(
-    products.find((product) => {
-      return product.id === "fles"
-    })
-  );
+  const [currentProduct, setCurrentProduct] = useState(products.fles);
 
   return (
     <div className={appStyles.container}>
