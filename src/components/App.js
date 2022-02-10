@@ -26,17 +26,7 @@ const App = () => {
           photos={products[productID].photos}
         /> */}
         <ProductInfo 
-          // productID and setProductID never changes since this project only has one product
-          // can be used when we need to add more products
-          setProductID={setCurrentProduct}
-          manufacturer={currentProduct.manufacturer}
-          name={currentProduct.name} 
-          blurb={currentProduct.blurb}
-          priceCurrent={currentProduct.priceCurrent}
-          discount={currentProduct.discount}
-          priceOriginal={currentProduct.priceOriginal}
-          cartQty={cartQty}
-          setCartQty={setCartQty}
+          productID="fles"
           />
       </div>
     </div>
