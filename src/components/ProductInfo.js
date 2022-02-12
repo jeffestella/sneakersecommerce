@@ -33,8 +33,7 @@ const ProductInfo = ({ productID }) => {
                     text="Add to cart"
                     addQty={addQty}
                     setAddQty={setAddQty}
-                    // cartQty={props.cartQty}
-                    // setCartQty={props.setCartQty}
+                    productID={productID}
                 />
             </div>
         </div>
