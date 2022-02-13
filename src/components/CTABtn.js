@@ -9,7 +9,6 @@ const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents, addToC
         <button 
             className={ctaBtnStyles.container}
             onClick={() => {
-                // console.log(`productID: ${productID}, addQty: ${addQty}`)
                 addToCart(productID, addQty)
                 setAddQty(0)
             }}
@@ -25,7 +24,6 @@ const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents, addToC
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {cartContents: state.cartContents};
 }
 
