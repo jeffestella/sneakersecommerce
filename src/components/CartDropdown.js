@@ -6,7 +6,16 @@ import CheckoutBtn from './CheckoutBtn';
 import CartCard from './CartCard';
 import products from '../data/products';
 
-const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty, productData }) => {
+const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty, productData, cartContents }) => {
+    const cartList = Object.keys(cartContents).length > 0 ?
+        Object.keys(cartContents).map((item) => {
+            return <CartCard
+                qty={cartContents.item}
+                productData={products.item}
+            />
+        }) :
+        "";
+
     return(
         <div className={`
             ${!cartDropdownActive ? 
@@ -16,13 +25,9 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
         ${cartDropdownStyles.container}`}>
             <p className={cartDropdownStyles.title}>Cart</p>
             <hr />
-            { cartQty > 0 ?
+            { Object.keys(cartContents) > 0 ?
             <div className={cartDropdownStyles.below}>
-                <CartCard 
-                    cartQty={cartQty}
-                    setCartQty={setCartQty}
-                    productData={productData}
-                />
+                {cartList}
                 <CheckoutBtn /> 
             </div> :
                 <p className={cartDropdownStyles.empty}>Your cart is empty.</p>

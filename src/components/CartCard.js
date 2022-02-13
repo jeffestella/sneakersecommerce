@@ -4,7 +4,7 @@ import iconDelete from '../assets/icon-delete.svg';
 import { clearCart } from '../actions';
 import { connect } from 'react-redux';
 
-const CartCard = ({ cartQty, setCartQty, productData, clearCart }) => {
+const CartCard = ({ qty, productData, clearCart }) => {
     return (
         <div className={cartCardStyles.container}>
             <img
@@ -15,8 +15,8 @@ const CartCard = ({ cartQty, setCartQty, productData, clearCart }) => {
             <div className={cartCardStyles.text}>
                 <p className={cartCardStyles.name}>{productData.name}</p>
                 <p>
-                    {`$${productData.priceCurrent}.00 x ${cartQty}`} 
-                    <span className={cartCardStyles.total}>{`$${productData.priceCurrent * cartQty}.00`}</span>
+                    {`$${productData.priceCurrent}.00 x ${qty}`} 
+                    <span className={cartCardStyles.total}>{`$${productData.priceCurrent * qty}.00`}</span>
                 </p>
             </div>
             <img

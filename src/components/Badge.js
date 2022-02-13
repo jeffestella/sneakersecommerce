@@ -4,14 +4,17 @@ import badgeStyles from './Badge.module.css';
 import { connect } from 'react-redux';
 
 const Badge = ({ cartContents }) => {
+    const cartQty = Object.values(cartContents).reduce((prev, current) => prev + current, 0);
     return (
         <div className={`
-        ${cartContents < 1 ?
+        ${cartQty < 1 ?
             badgeStyles.inactive:
             ''
         }
             ${badgeStyles.container}`}>
-            {cartContents}
+            {cartQty > 0 ?
+                cartQty :
+                ""}
         </div>
     )
 }
