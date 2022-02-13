@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 const cartReducer = (cartContents = {}, action) => {
-    if (action.type === "ADD_TO_CART") {
+    if (action.type === "ADD_TO_CART" && action.payload.quantity > 0) {
         const productID = action.payload.productID;
         let newCartContents = {...cartContents};
         const oldQty = cartContents[productID];

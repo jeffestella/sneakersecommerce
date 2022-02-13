@@ -4,7 +4,7 @@ import ctaBtnStyles from './CTABtn.module.css';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 
-const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents, addToCart }) => {
+const CTABtn = ({ icon, text, addQty, setAddQty, productID, addToCart }) => {
     return(
         <button 
             className={ctaBtnStyles.container}
