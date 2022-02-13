@@ -1,17 +1,23 @@
 import React from 'react';
 import badgeStyles from './Badge.module.css';
 
-const Badge = ({ cartQty }) => {
+import { connect } from 'react-redux';
+
+const Badge = ({ cartContents }) => {
     return (
         <div className={`
-        ${cartQty < 1 ?
+        ${cartContents < 1 ?
             badgeStyles.inactive:
             ''
         }
-        ${badgeStyles.container}`}>
-            {cartQty}
+            ${badgeStyles.container}`}>
+            {cartContents}
         </div>
     )
 }
 
-export default Badge;
+const mapStateToProps = (state) => {
+    return {cartContents: state.cartContents}
+}
+
+export default connect(mapStateToProps)(Badge);

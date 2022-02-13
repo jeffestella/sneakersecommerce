@@ -40,9 +40,4 @@ const ProductInfo = ({ productID }) => {
     );
 }
 
-const mapStateToProps = (state) => {
-    console.log(state)
-    return state
-}
-
-export default connect(mapStateToProps)(ProductInfo);
+export default ProductInfo;

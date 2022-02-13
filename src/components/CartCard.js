@@ -1,8 +1,10 @@
 import React from 'react';
 import cartCardStyles from './CartCard.module.css';
 import iconDelete from '../assets/icon-delete.svg';
+import { clearCart } from '../actions';
+import { connect } from 'react-redux';
 
-const CartCard = ({ cartQty, setCartQty, productData }) => {
+const CartCard = ({ cartQty, setCartQty, productData, clearCart }) => {
     return (
         <div className={cartCardStyles.container}>
             <img
@@ -22,7 +24,7 @@ const CartCard = ({ cartQty, setCartQty, productData }) => {
                 src={iconDelete}
                 alt="trash button"
                 onClick={() => {
-                    setCartQty(0);
+                    clearCart()
                     // setCartDropdownActive(false);
                 }}
             />
@@ -30,4 +32,8 @@ const CartCard = ({ cartQty, setCartQty, productData }) => {
     )
 }
 
-export default CartCard;
+const mapStateToProps = (state) => {
+    return {state: state}
+}
+
+export default connect(mapStateToProps, {clearCart: clearCart})(CartCard);

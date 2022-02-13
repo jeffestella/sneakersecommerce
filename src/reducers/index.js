@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 
 const cartReducer = (cartContents = 0, action) => {
     if (action.type === "ADD_TO_CART") {
-        // console.log('addtocart')
         // const productID = action.payload.productID;
         // let newCartContents = {...cartContents};
         // const oldQty = cartContents[productID];
@@ -14,8 +13,8 @@ const cartReducer = (cartContents = 0, action) => {
         //     newCartContents[productID] = addQty;
         //     return newCartContents;
         // }
-        const addQty = action.payload.quantity;
-        return cartContents + addQty;
+        const newQty = action.payload.quantity + cartContents
+        return newQty;
     } else if (action.type === "CLEAR_CART") {
         return {};
     } else {

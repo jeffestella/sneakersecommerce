@@ -2,15 +2,14 @@ import React from 'react';
 import ctaBtnStyles from './CTABtn.module.css';
 
 import { connect } from 'react-redux';
-import { addToCart } from '../actions';
+import { addToCart, clearCart } from '../actions';
 
-const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents }) => {
+const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents, addToCart }) => {
     return(
         <button 
             className={ctaBtnStyles.container}
             onClick={() => {
-                console.log(`productID: ${productID}, addQty: ${addQty}`)
-                console.log(cartContents)
+                // console.log(`productID: ${productID}, addQty: ${addQty}`)
                 addToCart(productID, addQty)
                 setAddQty(0)
             }}
@@ -30,4 +29,4 @@ const mapStateToProps = (state) => {
     return {cartContents: state.cartContents};
 }
 
-export default connect(mapStateToProps)(CTABtn);
+export default connect(mapStateToProps,{addToCart: addToCart})(CTABtn);

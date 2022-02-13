@@ -1,7 +1,10 @@
 import React from 'react';
+import cartDropdownStyles from './CartDropdown.module.css';
+import { connect } from 'react-redux';
+
 import CheckoutBtn from './CheckoutBtn';
 import CartCard from './CartCard';
-import cartDropdownStyles from './CartDropdown.module.css';
+import products from '../data/products';
 
 const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty, productData }) => {
     return(
@@ -28,4 +31,8 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
     );
 }
 
-export default CartDropdown;
+const mapStateToProps = (state) => {
+    return {cartContents: state.cartContents}
+}
+
+export default connect(mapStateToProps)(CartDropdown);
