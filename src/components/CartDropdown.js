@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 
 import CheckoutBtn from './CheckoutBtn';
 import CartCard from './CartCard';
-import products from '../data/products';
+import products from '../data/products.js';
 
-const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setCartQty, productData, cartContents }) => {
-    const cartList = Object.keys(cartContents).length > 0 ?
+const CartDropdown = ({ cartDropdownActive, setCartDropdownActive,  cartContents }) => {
+    const cartQty = Object.keys(cartContents).length;
+    const cartList = cartQty > 0 ?
         Object.keys(cartContents).map((item) => {
             return <CartCard
-                qty={cartContents.item}
-                productData={products.item}
+                qty={cartContents[item]}
+                productData={products[item]}
+                key={item}
             />
         }) :
         "";
@@ -25,7 +27,7 @@ const CartDropdown = ({ cartDropdownActive, setCartDropdownActive, cartQty, setC
         ${cartDropdownStyles.container}`}>
             <p className={cartDropdownStyles.title}>Cart</p>
             <hr />
-            { Object.keys(cartContents) > 0 ?
+            { cartQty > 0 ?
             <div className={cartDropdownStyles.below}>
                 {cartList}
                 <CheckoutBtn /> 

@@ -2,7 +2,7 @@ import React from 'react';
 import ctaBtnStyles from './CTABtn.module.css';
 
 import { connect } from 'react-redux';
-import { addToCart, clearCart } from '../actions';
+import { addToCart } from '../actions';
 
 const CTABtn = ({ icon, text, addQty, setAddQty, productID, cartContents, addToCart }) => {
     return(
