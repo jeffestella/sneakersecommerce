@@ -97,6 +97,12 @@
     border: 2px solid var(--orange);
 }
 
+@media screen and (max-width: 991px) {
+    .container {
+        width: clamp (375px 100%, 500px)
+    }
+}
+
 @media screen and (max-width: 375px) {
     .container {
         /* border: 1px solid red;  */

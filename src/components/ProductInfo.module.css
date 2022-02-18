@@ -80,6 +80,12 @@
     align-items: center;
 }
 
+@media screen and (max-width: 991px) {
+    .container {
+        width: clamp (375px 30%, 200px)
+    }
+}
+
 @media screen and (max-width: 375px) {
     .container {
         /* border: 1px solid red; */

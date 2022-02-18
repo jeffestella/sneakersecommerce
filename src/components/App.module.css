@@ -24,6 +24,13 @@
     align-items: center;
 }
 
+@media screen and (max-width: 991px) {
+    .container {
+        width: clamp (375px 100%, 991px)
+    }
+    
+}
+
 @media screen and (max-width: 375px) {
     .container{
         margin: 0;
