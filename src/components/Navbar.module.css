@@ -99,7 +99,7 @@
 
 @media screen and (max-width: 991px) {
     .container {
-        width: clamp (375px 100%, 500px)
+        width: clamp (375px 100%, 500px);
     }
 }
 

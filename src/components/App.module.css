@@ -1,7 +1,7 @@
 .container {
     margin: 0;
     padding: 0;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: clamp(1000px, 90vw, 1200px);
     min-height: 700px;
     height: 20px;
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 991px) {
     .container {
-        width: clamp (375px 100%, 991px)
+        width: clamp (375px 100%, 991px);
     }
     
 }
